@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <div className="px-[100px] flex gap-20 justify-center pt-8">
-      <div className="flex">
+      <div className="flex pt-3">
         <div>Logo</div>
         <h3>FX miners</h3>
       </div>
@@ -23,15 +23,15 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="flex flex-row gap-10">
-        <button className="w-24 h-10 bg-blue-500 text-white rounded-lg">
+        <button className="w-24 h-10 bg-blue-500 hover:bg-blue-600 duration-700 text-white rounded-lg">
           Log in
         </button>
-        <button className="w-10 h-10 border-gray-700 border-[1.5px] rounded-md flex items-center justify-center hover:bg-blue-500 hover:border-0 hover:text-white">
+        <button className="w-10 h-10 border-gray-700 border-[1.5px] rounded-md flex items-center justify-center hover:bg-blue-500 hover:border-0 hover:text-white duration-400">
           <FiLogIn />
         </button>
         {/* Icon button with hover effect */}
         <button
-          className="w-10 h-10  border-gray-700 border-[1.5px] rounded-md flex items-center justify-center hover:bg-blue-500 hover:border-0 hover:text-white"
+          className="w-10 h-10  border-gray-700 border-[1.5px] rounded-md flex items-center justify-center hover:bg-blue-500 hover:border-0 hover:text-white duration-400"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
