@@ -1,21 +1,25 @@
 "use client";
-import { FiLogIn } from "react-icons/fi";
-import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { useState } from "react";
 import { CiMenuFries } from "react-icons/ci";
+import { FiLogIn } from "react-icons/fi";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 const Navbar = () => {
-  // State to track hover status of the theme button
   const [isHovered, setIsHovered] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="py-4 px-10 flex flex-row justify-between items-center bg-white shadow-md relative">
+    <nav className="relative py-4 px-10 flex flex-row justify-between items-center bg-white shadow-md">
+      {/* Logo (Mobile Only) */}
+      <div className="md:hidden flex-1">
+        <div className="text-lg font-bold">Logo</div>
+      </div>
+
       {/* Mobile Menu Icon */}
-      <div className="md:hidden flex items-center">
+      <div className="md:hidden absolute right-4 top-4">
         <CiMenuFries
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="cursor-pointer"
+          className="text-2xl cursor-pointer"
         />
       </div>
 
@@ -76,18 +80,18 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Content */}
-      <div className="hidden md:flex items-center space-x-4">
+      <div className="hidden lg:flex flex-1 items-center">
         <div className="text-lg font-bold">Logo</div>
-        <h3 className="text-xl font-semibold">FX miners</h3>
+        <h3 className="text-xl font-semibold ml-4">FX miners</h3>
       </div>
-      <ul className="hidden md:flex flex-row space-x-8 font-bold">
+      <ul className="hidden lg:flex flex-row space-x-8 font-bold mr-7">
         <li className="py-2 lg:py-0">Home</li>
         <li className="py-2 lg:py-0">Mentorship</li>
         <li className="py-2 lg:py-0">Signals</li>
         <li className="py-2 lg:py-0">Minor AI</li>
         <li className="py-2 lg:py-0">About us</li>
       </ul>
-      <div className="hidden md:flex flex-row gap-4">
+      <div className="hidden lg:flex flex-row gap-4">
         <button className="w-full lg:w-24 h-10 bg-blue-500 hover:bg-blue-600 duration-300 text-white rounded-lg">
           Log in
         </button>
