@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { CiMenuFries } from "react-icons/ci";
+import { IoMenu } from "react-icons/io5";
 import { FiLogIn } from "react-icons/fi";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 
@@ -9,17 +9,17 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="relative py-4 px-10 flex flex-row justify-between items-center bg-white shadow-md">
+    <nav className=" w-full py-4 px-10 flex flex-row justify-between items-center fixed shadow-md bg-transparent backdrop-blur-md">
       {/* Logo (Mobile Only) */}
       <div className="lg:hidden flex-1">
         <div className="text-lg font-bold">Logo</div>
       </div>
 
       {/* Mobile Menu Icon */}
-      <div className="lg:hidden absolute right-4 top-4">
-        <CiMenuFries
+      <div className="lg:hidden absolute right-4 top-4 border-1 border-black">
+        <IoMenu
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="text-2xl cursor-pointer"
+          className="font-bold text-3xl cursor-pointer"
         />
       </div>
 
