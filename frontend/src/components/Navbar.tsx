@@ -11,12 +11,12 @@ const Navbar = () => {
   return (
     <nav className="relative py-4 px-10 flex flex-row justify-between items-center bg-white shadow-md">
       {/* Logo (Mobile Only) */}
-      <div className="md:hidden flex-1">
+      <div className="lg:hidden flex-1">
         <div className="text-lg font-bold">Logo</div>
       </div>
 
       {/* Mobile Menu Icon */}
-      <div className="md:hidden absolute right-4 top-4">
+      <div className="lg:hidden absolute right-4 top-4">
         <CiMenuFries
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="text-2xl cursor-pointer"
@@ -53,7 +53,7 @@ const Navbar = () => {
           </li>
           <li>
             <a href="#minor-ai" onClick={() => setIsMenuOpen(false)}>
-              Minor AI
+              Miner AI
             </a>
           </li>
           <li>
