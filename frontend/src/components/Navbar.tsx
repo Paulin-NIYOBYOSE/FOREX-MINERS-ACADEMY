@@ -35,7 +35,7 @@ const Navbar = () => {
         >
           &times; {/* Close button */}
         </button>
-        <ul className="flex flex-col gap-4 font-bold text-center">
+        <ul className="flex flex-col gap-4 font-bold text-center mt-[20rem] bg-slate-100">
           <li>
             <a href="#home" onClick={() => setIsMenuOpen(false)}>
               Home
