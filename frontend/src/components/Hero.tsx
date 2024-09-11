@@ -24,7 +24,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="h-full w-1/2 border-2"></div>
+          <div className="h-full w-1/2"></div>
         </div>
       </div>
     </>
